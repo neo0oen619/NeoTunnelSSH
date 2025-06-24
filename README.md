@@ -1,4 +1,4 @@
-# neossh
+# NeoTunnel.ps1
 
 > **One-command PowerShell wizard that turns a fresh Windows PC into a securely reachable node—sets up admin user, RDP, OpenSSH, Tailscale & ready-made client scripts.**
 
@@ -43,11 +43,11 @@ Quick Start
 
 1. Grab the script
 
-Download neo_ssh.ps1 and drop it in any folder you like. Everything it generates will live next to it.
+Download NeoTunnel.ps1 and drop it in any folder you like. Everything it generates will live next to it.
 
 2. Run it on the host PC
 
-.\neo_ssh.ps1
+.\NeoTunnel.ps1
 
 The wizard will ask you to:
 
