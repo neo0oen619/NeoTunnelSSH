@@ -35,17 +35,8 @@ All activity is logged to `build_YYYYMMDD_HHMMSS.log` for easy auditing.
 
 ### 1. Clone / download
 
-```powershell
-# on your client workstation
-git clone https://github.com/<your-user>/easyssh.git
-cd easyssh
-—or— just hit “Download ZIP” on GitHub and extract it.
-
-2. Run the wizard
-powershell
-Copy
-Edit
-# still on your workstation
+download the file easy_ssh.ps1 and put it where you want (other scripts will be created in the same folfer)
+open powershell 
 .\easy_ssh.ps1
 You will be prompted to:
 
