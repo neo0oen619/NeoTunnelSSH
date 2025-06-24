@@ -1,4 +1,4 @@
-# easyssh
+# neossh
 
 > **One-command PowerShell wizard that turns a fresh Windows PC into a securely reachable node—sets up admin user, RDP, OpenSSH, Tailscale & ready-made client scripts.**
 
@@ -33,59 +33,73 @@ All activity is logged to `build_YYYYMMDD_HHMMSS.log` for easy auditing.
 
 ## 🚀 Quick start
 
-### 1. Clone / download
+Prerequisites
 
-download the file easy_ssh.ps1 and put it where you want (other scripts will be created in the same folfer)
-open powershell 
-.\easy_ssh.ps1
-You will be prompted to:
+🐕 Install Tailscale and sign in
 
-Pick an existing local user on the host or create a new one.
+🧠 At least 25 % brain capacity (you’ve got this)
 
-Enter / confirm the password (twice for “none”).
+Quick Start
 
-Choose the host’s Tailscale node from a list or type its 100.x.x.x address / DNS name.
+1. Grab the script
 
-When the wizard finishes you’ll see something like:
+Download neo_ssh.ps1 and drop it in any folder you like. Everything it generates will live next to it.
 
-makefile
-Copy
-Edit
-Created:
-  host_setup_alice_100.99.42.17.ps1
-  client_use_alice_100.99.42.17.ps1
-  alice_100.99.42.17.rdp
-3. Copy files to the host
-Take host_setup_<user>_<ip>.ps1 to the target PC (USB, SMB share, whatever).
+2. Run it on the host PC
+
+.\neo_ssh.ps1
+
+The wizard will ask you to:
+
+Choose or create a Windows user
+
+Set/confirm the password (type none twice for password‑less)
+
+Enter the host’s Tailscale IP (100.x.x.x) or tailnet DNS name
+
+When it finishes you’ll see three shiny new files:
+
+host_setup_<user>_<ip>.ps1     # one‑click host installer
+client_use_<user>_<ip>.ps1     # helper script for your client
+<user>_<ip>.rdp                # double‑click RDP shortcut
+
+3. Copy the host installer
+
+Move host_setup_<user>_<ip>.ps1 to the target PC (USB, SMB, pigeon…).
 
 4. Run host setup as Administrator
-powershell
-Copy
-Edit
+
 # on the host PC
-.\host_setup_alice_100.99.42.17.ps1
-It will:
+.\host_setup_<user>_<ip>.ps1
 
-Install Tailscale if missing (silent /quiet installer).
+This script will silently:
 
-Enable RDP, OpenSSH, membership in Administrators & Remote Desktop Users.
+Install Tailscale if missing (/quiet)
 
-Start all services and bring Tailscale online.
+Enable RDP and OpenSSH
 
-⚠️ Reboot once after this step so the new groups / services are fully active.
+Add the user to Administrators & Remote Desktop Users
 
-5. Connect from a client
-Option A — run the helper script:
+Start services and bring Tailscale online
 
-powershell
-Copy
-Edit
-# on any client machine with ssh & mstsc
-.\client_use_alice_100.99.42.17.ps1
-Pick “1 = SSH tunnel” to map your local 3389 → host 3389, then launch RDP.
-Pick “2” for direct RDP over your tailnet.
+Reboot once when it’s done so the new groups/services become active.
 
-Option B — just double-click the generated .rdp file.
+5. Connect from your client
+
+Option A — use the helper
+
+# on any client with ssh & mstsc
+.\client_use_<user>_<ip>.ps1
+
+Choose:
+
+1 → SSH tunnel (local 3389 → host 3389) and auto‑launch RDP
+
+2 → Direct RDP over your tailnet
+
+Option B — double‑click bliss
+
+Open the generated .rdp file and log in.
 
 🔐 Security notes & best practice
 Passwords in files – the host-setup script embeds the password you typed.
