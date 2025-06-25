@@ -4,33 +4,6 @@
 
 ---
 
-## ✨ What it does
-
-1. **Creates or updates** a local administrator account ­— you choose the username & password interactively.  
-2. **Enables Remote Desktop (RDP)** and opens the correct firewall rules.  
-3. **Installs / starts OpenSSH** so you can SSH into the box.  
-4. **Installs / revives Tailscale** (or skips if it’s already installed) and brings the interface *up* unattended.  
-5. **Generates three helper artefacts** named after the user and Tailnet IP/DNS:
-
-| File | Purpose |
-|------|---------|
-| `host_setup_<user>_<ip>.ps1` | Rerunnable host-side setup (idempotent) |
-| `client_use_<user>_<ip>.ps1` | Client helper that opens an SSH tunnel **or** launches RDP |
-| `<user>_<ip>.rdp` | Double-click for a one-shot RDP session |
-
-All activity is logged to `build_YYYYMMDD_HHMMSS.log` for easy auditing.
-
----
-
-## 📋 Requirements
-
-| Machine | OS | Rights | Extras |
-|---------|----|--------|--------|
-| **Host PC** (the box you’re provisioning) | Windows 10/11 *or* Windows Server 2016+ | Must run scripts with **Administrator** privileges | Internet access to download Tailscale if absent |
-| **Client PC** (your workstation) | Windows 10/11, macOS or Linux | Standard user OK | Needs `ssh` if you choose tunnel mode |
-
----
-
 ## 🚀 Quick start
 
 Prerequisites
@@ -100,6 +73,34 @@ Choose:
 Option B — double‑click bliss
 
 Open the generated .rdp file and log in.
+
+---
+
+## ✨ What it does
+
+1. **Creates or updates** a local administrator account ­— you choose the username & password interactively.  
+2. **Enables Remote Desktop (RDP)** and opens the correct firewall rules.  
+3. **Installs / starts OpenSSH** so you can SSH into the box.  
+4. **Installs / revives Tailscale** (or skips if it’s already installed) and brings the interface *up* unattended.  
+5. **Generates three helper artefacts** named after the user and Tailnet IP/DNS:
+
+| File | Purpose |
+|------|---------|
+| `host_setup_<user>_<ip>.ps1` | Rerunnable host-side setup (idempotent) |
+| `client_use_<user>_<ip>.ps1` | Client helper that opens an SSH tunnel **or** launches RDP |
+| `<user>_<ip>.rdp` | Double-click for a one-shot RDP session |
+
+All activity is logged to `build_YYYYMMDD_HHMMSS.log` for easy auditing.
+
+---
+
+## 📋 Requirements
+
+| Machine | OS | Rights | Extras |
+|---------|----|--------|--------|
+| **Host PC** (the box you’re provisioning) | Windows 10/11 *or* Windows Server 2016+ | Must run scripts with **Administrator** privileges | Internet access to download Tailscale if absent |
+| **Client PC** (your workstation) | Windows 10/11, macOS or Linux | Standard user OK | Needs `ssh` if you choose tunnel mode |
+
 
 🔐 Security notes & best practice
 Passwords in files – the host-setup script embeds the password you typed.
