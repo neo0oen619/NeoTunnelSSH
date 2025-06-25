@@ -115,3 +115,6 @@ All scripts are idempotent: rerunning them is safe—existing users, services & 
 
 Tailscale is installed from the official URL https://pkgs.tailscale.com/stable/tailscale-setup-latest.exe.
 If you prefer an internal mirror, edit the download URL before running.
+
+
+**use taildrop to share files easily like the helper script just right click and send with tailscale**
