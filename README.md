@@ -1,4 +1,4 @@
-# NeoTunnel.ps1
+# NeoTunnelssh.ps1
 
 > **One-command PowerShell wizard that turns a fresh Windows PC into a securely reachable node—sets up admin user, RDP, OpenSSH, Tailscale & ready-made client scripts.**
 
