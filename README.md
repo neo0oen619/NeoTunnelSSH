@@ -21,11 +21,11 @@ Quick Start
 
 1. Grab the script
 
-Download NeoTunnel.ps1 and drop it in any folder you like. Everything it generates will live next to it.
+Download NeoTunnelSSH.ps1 and drop it in any folder you like. Everything it generates will live next to it.
 
 2. Run it on the host PC
 
-.\NeoTunnel.ps1
+.\NeoTunnelSSH.ps1
 
 The wizard will ask you to:
 
