@@ -62,11 +62,10 @@ Start services and bring Tailscale online
 
 Reboot once when it’s done so the new groups/services become active.
 
-5. Connect from your client
+# 5. Connect from your client
 
 Option A — use the helper
-
-# on any client with ssh & mstsc
+on any client with ssh & mstsc
 .\client_use_<user>_<ip>.ps1
 
 Choose:
