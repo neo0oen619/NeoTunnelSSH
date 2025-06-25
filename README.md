@@ -7,14 +7,15 @@
 ## 🚀 Quick start
 
 Prerequisites
+
+🧠 At least 25 % brain capacity (you’ve got this)
+
 run this in powershell
 
 >**Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name fDenyTSConnections -Value 0; Enable-NetFirewallRule -DisplayGroup 'Remote Desktop'**
 
-
 🐕 Install Tailscale and sign in
 
-🧠 At least 25 % brain capacity (you’ve got this)
 
 Quick Start
 
