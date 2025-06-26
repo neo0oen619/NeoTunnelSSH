@@ -106,9 +106,7 @@ All activity is logged to `build_YYYYMMDD_HHMMSS.log` for easy auditing.
 | **Client PC** (your workstation) | Windows 10/11, macOS or Linux | Standard user OK | Needs `ssh` if you choose tunnel mode |
 
 
-🔐 Security notes & best practice
-Passwords in files – the host-setup script embeds the password you typed.
-Keep that file private or delete it after first run.
+Host-setup now embeds passwords encrypted with ConvertFrom-SecureString (no plain-text secrets). The encrypted blob is bound to the current Windows user & machine. Still, treat the generated script as sensitive—keep it private or delete it after the first run.
 
 All scripts are idempotent: rerunning them is safe—existing users, services & firewall rules are detected and skipped.
 
