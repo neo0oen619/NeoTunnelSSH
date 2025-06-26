@@ -31,7 +31,7 @@ The wizard will ask you to:
 
 Choose or create a Windows user
 
-Set/confirm the password (type none twice to stay with the same passwrod for windows )
+Set/confirm the password (type none twice to stay with the same password for windows )
 
 Enter the host’s Tailscale IP (100.x.x.x) or tailnet DNS name
 
