@@ -1,10 +1,3 @@
-What’s new in v1.0.1 :
-• -du Delete-User wizard
-• -help flag
-• Automatic admin elevation
-• Colour-coded, rotating logs (latest 3)
-• Encrypted‐credential embedding
-
 # NeoTunnelssh.ps1
 
 > **One-command PowerShell wizard that turns a fresh Windows PC into a securely reachable node—sets up admin user, RDP, OpenSSH, Tailscale & ready-made client scripts.**
