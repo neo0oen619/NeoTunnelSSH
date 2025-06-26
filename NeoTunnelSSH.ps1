@@ -1,5 +1,5 @@
 <#  builder.ps1 – new-PC wizard
-    Iteration 21 · help text trimmed (no -help example line)
+
 #>
 
 [CmdletBinding()]
