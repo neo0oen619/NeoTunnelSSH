@@ -1,5 +1,5 @@
-<#  builder.ps1 – new-PC wizard
-
+<#  NeoTunnelSSH.ps1 – new-PC wizard
+    
 #>
 
 [CmdletBinding()]
